@@ -1,0 +1,6 @@
+#!/bin/bash
+
+input=${@}
+wget -q -U Mozilla -O ~/output.mp3 "https://tts.voicetech.yandex.net/tts?format=mp3&quality=hi&platform=web&application=slovari&lang=en_GB&text=$input"
+mpg123 -q ~/output.mp3
+rm ~/output.mp3
